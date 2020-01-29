@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,300,300i,400,400i,600,600i,700|IBM+Plex+Sans:200,300,400&display=swap" rel="stylesheet">
+    <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
+
+    <link rel="stylesheet" href="style/leaflet.css">
+    <script src="js/leaflet-src.js"></script>
+    <link rel="stylesheet" href="style/screen.css" />
+    <script src="js/leaflet-search.js"></script>
+    <link rel="stylesheet" href="style/leaflet-search.css" />
+    <link rel="stylesheet" href="style/MarkerCluster.css" />
+    <link rel="stylesheet" href="style/MarkerCluster.Default.css" />
+    <script src="js/leaflet.markercluster-src.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="js/d3.min.js" charset="utf-8"></script>
+
+
+    <title></title>
+  </head>
+  <body>
+    <div class='bigcontainer'>
+      <div class='sides'></div>
+      <div class='total'>
+        <div class="menu">
+          <a href="index.html"><img src="img/logo.svg" alt="logo" width="190px" height="100px"></a>
+
+          <ul class="menu">
+            <li class="menuitem"><a href="index.html">Brasil</a></li>
+            <li class="menuitem"><a href="cidades.html">Cidades</a></li>
+            <li class="menuitem"><a href="operadoras.html">Operadoras</a></li>
+            <li class="menuitem"><a href="sobre.html">Sobre</a></li>
+            <li class="menuitem"><a href="publicacoes.html">Publicações</a></li>
+          </ul>
+          <a href="index.html">PT/EN</a>
+        </div>
+        <div id="main">
+          <div id="map">
+
+          </div>
+          <div class="side">
+            <div class="s01">
+              <div id="s01"><h3>Brasil</h3></div>
+            </div>
+            <div class="s03"><span class="button"><a href="sistemas.html" class='nolink'>Lista de sistemas</a></span></div>
+            <div class="s02">
+              <span class="divheader">Emissões de CO² evitadas</span>
+              <span class="bignumber"></span>
+            </div>
+            <div class='s04holder'>
+              <div class="s04">
+                <span class="divheader">Veículos</span>
+                <span class="bignumber">7.110</span>
+              </div>
+              <div class="s04_00">
+                <span class="divheader"></span>
+                <span class="bignumber"></span>
+              </div>
+            </div>
+            <div class="s05">
+              <div class="s05_01" id='basesvg'>
+                <svg class="graph">
+
+                </svg><br>
+                <span class='divheader'>Bike</span>
+                <span class="smallnumber">0</span>
+              </div>
+              <div class="s05_02">
+                <svg class="graph">
+
+                </svg>
+                <span class='divheader'>E-Bike</span>
+                <span class="smallnumber">0</span>
+              </div>
+              <div class="s05_03">
+                <svg class="graph">
+
+                </svg>
+                <span class='divheader'>Patinete</span>
+                <span class="smallnumber">0</span>
+              </div>
+            </div>
+            <div class="s06">
+
+                <div class="s06_01">
+                  <span class='divheader'>Viagens diárias</span>
+                  <span class="bignumber">0</span>
+                </div>
+                <div class="s06_02">
+                  <span class='divheader'>Km percorridos/dia</span>
+                  <span class="bignumber">0</span>
+                </div>
+
+            </div>
+            <div class="s07">
+              <div class="s07_01">
+                <span class='divheader'>Gênero</span>
+                <div class='genholder'>
+                  <div class='gender'>
+                    <img src="img/homen.svg" alt="logo" width="11px" height="39px">
+                    <span class='men'>0</span>
+                  </div>
+                  <div class='gender'>
+                    <img src="img/mulher.svg" alt="logo" width="15px" height="39px">
+                    <span class='women'>0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="s07_02">
+                <span class='divheader'>Idade</span>
+                <br>
+                <span class="agelist">
+                  15 a 29: <span class="quinze"></span><br>
+                  30 a 59: <span class="trinta"></span><br>
+                  60+: <span class="sessenta"></span><br>
+                </span>
+              </div>
+              <div class="s07_03">
+                <span class='divheader'>Usuários</span><br>
+                <span class="bignumber">0</span>
+              </div>
+            </div>
+            <div class="s08">
+              <div class="s08_01">
+                <span class>Fonte dos dados:</span><span class="demodata"></span>
+              </div>
+              <div class="s08_02">
+                * Dados não disponíveis
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='sides'></div>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="js/main.js" charset="utf-8"  type="text/babel"></script>
+  <script src="js/cluster.js" charset="utf-8"  type="text/babel"></script>
+
+</html>
