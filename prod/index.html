@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,300,300i,400,400i,600,600i,700|IBM+Plex+Sans:200,300,400&display=swap" rel="stylesheet">
-    <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
 
     <link rel="stylesheet" href="style/leaflet.css">
     <script src="js/leaflet-src.js"></script>
@@ -20,11 +19,21 @@
     <title></title>
   </head>
   <body>
+    <div class="hamburger">
+      <div class="hamburger_list">
+        <div class="hamburger_item"><a href="index.html">Brasil</a></div>
+        <div class="hamburger_item"><a href="cidades.html">Cidades</a></div>
+        <div class="hamburger_item"><a href="operadoras.html">Operadoras</a></div>
+        <div class="hamburger_item"><a href="sobre.html">Sobre</a></div>
+        <div class="hamburger_item"><a href="publicacoes.html">Publicações</a></div>
+      </div>
+      <div class="close_hamburger">X</div>
+    </div>
     <div class='bigcontainer'>
       <div class='sides'></div>
       <div class='total'>
         <div class="menu">
-          <a href="index.html"><img src="img/logo.svg" alt="logo" width="190px" height="100px"></a>
+          <span class="hamburger_icon"><img src="img/hambg.svg"></span><a href="index.html"><img src="img/logo.svg" alt="logo" class='svglogo' width="190px" height="100px"></a>
 
           <ul class="menu">
             <li class="menuitem"><a href="index.html">Brasil</a></li>
@@ -50,8 +59,8 @@
             </div>
             <div class='s04holder'>
               <div class="s04">
-                <span class="divheader">Veículos</span>
-                <span class="bignumber">7.110</span>
+                <span class="divheader">Km percorridos/dia</span>
+                <span class="bignumber"></span>
               </div>
               <div class="s04_00">
                 <span class="divheader"></span>
@@ -59,39 +68,20 @@
               </div>
             </div>
             <div class="s05">
-              <div class="s05_01" id='basesvg'>
-                <svg class="graph">
-
-                </svg><br>
-                <span class='divheader'>Bike</span>
-                <span class="smallnumber">0</span>
-              </div>
-              <div class="s05_02">
-                <svg class="graph">
-
-                </svg>
-                <span class='divheader'>E-Bike</span>
-                <span class="smallnumber">0</span>
+              <div class="s05_01">
+                <span class='divheader'>Nº bicicletas</span>
+                <span class="smallnumber"></span>
               </div>
               <div class="s05_03">
-                <svg class="graph">
-
-                </svg>
-                <span class='divheader'>Patinete</span>
-                <span class="smallnumber">0</span>
+                <span class='divheader'>Nº patinetes</span>
+                <span class="smallnumber"></span>
               </div>
             </div>
             <div class="s06">
-
                 <div class="s06_01">
                   <span class='divheader'>Viagens diárias</span>
-                  <span class="bignumber">0</span>
+                  <span class="bignumber"></span>
                 </div>
-                <div class="s06_02">
-                  <span class='divheader'>Km percorridos/dia</span>
-                  <span class="bignumber">0</span>
-                </div>
-
             </div>
             <div class="s07">
               <div class="s07_01">
@@ -99,11 +89,11 @@
                 <div class='genholder'>
                   <div class='gender'>
                     <img src="img/homen.svg" alt="logo" width="11px" height="39px">
-                    <span class='men'>0</span>
+                    <span class='men'></span>
                   </div>
                   <div class='gender'>
                     <img src="img/mulher.svg" alt="logo" width="15px" height="39px">
-                    <span class='women'>0</span>
+                    <span class='women'></span>
                   </div>
                 </div>
               </div>
@@ -118,12 +108,12 @@
               </div>
               <div class="s07_03">
                 <span class='divheader'>Usuários</span><br>
-                <span class="bignumber">0</span>
+                <span class="bignumber"></span>
               </div>
             </div>
             <div class="s08">
               <div class="s08_01">
-                <span class>Fonte dos dados:</span><span class="demodata"></span>
+                <span class><a href='data/micromobilidade_fonte_escopo_dados.pdf' target='_blank'>Fonte dos dados</a></span><span class="demodata"></span>
               </div>
               <div class="s08_02">
                 * Dados não disponíveis
@@ -135,7 +125,19 @@
       <div class='sides'></div>
     </div>
   </body>
+  <script>
+    d3.select('span.hamburger_icon')
+    .on('mousedown',function(){
+      d3.select('div.hamburger')
+      .style('display','flex')
+    })
 
+    d3.select('div.close_hamburger')
+    .on('mousedown',function(){
+      d3.select('div.hamburger')
+      .style('display','none')
+    })
+  </script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="js/main.js" charset="utf-8"  type="text/babel"></script>
   <script src="js/cluster.js" charset="utf-8"  type="text/babel"></script>

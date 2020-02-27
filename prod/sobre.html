@@ -17,11 +17,21 @@
     <title></title>
   </head>
   <body>
+    <div class="hamburger">
+      <div class="hamburger_list">
+        <div class="hamburger_item"><a href="index.html">Brasil</a></div>
+        <div class="hamburger_item"><a href="cidades.html">Cidades</a></div>
+        <div class="hamburger_item"><a href="operadoras.html">Operadoras</a></div>
+        <div class="hamburger_item"><a href="sobre.html">Sobre</a></div>
+        <div class="hamburger_item"><a href="publicacoes.html">Publicações</a></div>
+      </div>
+      <div class="close_hamburger">X</div>
+    </div>
     <div class='bigcontainer'>
       <div class='sides'></div>
       <div class='total'>
         <div class="menu">
-          <img src="img/logo.svg" alt="logo" width="190px" height="100px">
+          <span class="hamburger_icon"><img src="img/hambg.svg"></span><a href="index.html"><img src="img/logo.svg" alt="logo" class='svglogo' width="190px" height="100px"></a>
 
           <ul class="menu">
             <li class="menuitem"><a href="index.html">Brasil</a></li>
@@ -36,19 +46,90 @@
           <div class="head_geral">
             Sobre
           </div>
-          <div class="container_2col">
-
-            <div class="first_col">
-            </div>
-            <div class="second_col">
-            </div>
-
-          </div>
+          <p class='base_texto_longo'>
+            A Plataforma Micromobilidade Brasil
+            é coordenada pelo Laboratório de Mobilidade Sustentável (LABMOB),
+            da Universidade Federal do Rio de Janeiro (UFRJ), com apoio
+            do Instituto Clima e Sociedade (ICS) e realizado em parceria
+            com o Instituto de Energia e Meio Ambiente (IEMA). Os objetivos
+            da Plataforma são: mapear os sistemas de micromobilidade públicos,
+            promover a transparência de dados e quantificar as emissões de CO² evitadas.
+          </p>
+          <p class='base_texto_longo'>
+            Os sistemas de micromobilidade pública têm crescido exponencialmente
+            nas cidades brasileiras. No contexto de congestionamentos e
+            comprometimento ambiental por conta do uso amplo de veículos
+            motorizados movidos a combustíveis fósseis, os sistemas de
+            micromobilidade aparecem como iniciativa de incentivo ao
+            transporte ativo e sustentável e alternativa para a realização
+            de deslocamentos cotidianos. O conceito de micromobilidade
+            se refere aos deslocamentos feitos mediante veículos leves
+            conectados a novas tecnologias e impulsionados por energia
+            elétrica ou força humana. Esses veículos são usados muitas
+            das vezes em combinação com outros modos de transporte nos
+            chamados deslocamentos de primeira e/ou última milha.
+          </p>
+          <p class='base_texto_longo'>
+            Atualmente, mais de mil cidades ao redor do planeta possuem
+            sistemas de micromobilidade compartilhada em operação. Em geral,
+            esses sistemas sãopúblicos e regulados pelo poder municipal das
+            cidades onde se instalam. No entanto, são em muitos casos
+            operacionalizados por empresas do setor privado. Os serviços
+            de compartilhamento atuais apresentam dois formatos principais:
+            em estações fixas de retirada e devolução ou do tipo dockless –
+            sem estação fixa –, no qual os veículos são desbloqueados usando
+            um aplicativo para smartphone e estacionados ao longo da calçada
+            dentro de uma região definida. Esses sistemas oferecem comumente
+            o aluguel de  bicicletas e patinetes, com oferta bastante variada
+            em termos de número de veículos disponíveis.
+          </p>
+          <p class='base_texto_longo'>
+            Os dados sobre os sistemas apresentados na Plataforma
+            Micromobilidade Brasil se referem ao uso no ano de 2019
+            e foram disponibilizados pelas  três maiores empresas
+            operadoras de sistemas no Brasil naquele ano - Tembici,
+            Grow e Serttel. O escopo temporal dos dados varia de caso a caso,
+            bem como algumas referências de valores apresentadas na plataforma
+            (a exemplo do número de veículos disponíveis em cada operação).
+            No geral, os valores exibidos correspondem a médias diárias
+            computadas em períodos que alternam entre três a seis meses de
+            atividade dos sistemas no ano de 2019. Para informações sobre o
+            escopo desses dados, acesse <a href='data/micromobilidade_fonte_escopo_dados.pdf' target='_blank'>neste link</a> um relatório detalhado
+            sobre a metodologia usada.
+          </p>
+          <p class='base_texto_longo'>
+            A equação para o cálculo de emissões de CO² evitadas foi
+            desenvolvida pelo IEMA com base na: 1) quilometragem percorrida
+            no sistema conforme a média de uso diário contabilizada;
+            2) participação percentual (%) do modo de transporte movido
+            a combustível fóssil (automóvel ou motocicleta) na divisão modal
+            do município em que o sistema está localizado para estimativas
+            relacionada à substituição modal pelos usuários dos serviços
+            de micromobilidade; 3) fator de emissão de CO²e, relativo ao modo
+            de transporte movido a combustível fóssil (automóvel ou motocicleta),
+            medido em  gCO²e/km, variando conforme o município de análise.
+            <a href='data/micromobilidade_fonte_escopo_dados.pdf' target='_blank'>Neste link</a>, encontra-se a metodologia em detalhe do cálculo de
+            emissões evitadas pelo uso dos sistemas.
+          </p>
         </div>
       </div>
       <div class='sides'></div>
     </div>
   </body>
+
+  <script>
+    d3.select('span.hamburger_icon')
+    .on('mousedown',function(){
+      d3.select('div.hamburger')
+      .style('display','flex')
+    })
+
+    d3.select('div.close_hamburger')
+    .on('mousedown',function(){
+      d3.select('div.hamburger')
+      .style('display','none')
+    })
+  </script>
 
   <!-- <script src="js/main.js" charset="utf-8"  type="module"></script>
   <script src="js/cluster.js" charset="utf-8"  type="module"></script> -->

@@ -17,11 +17,22 @@
     <title></title>
   </head>
   <body>
+    <div class="hamburger">
+      <div class="hamburger_list">
+        <div class="hamburger_item"><a href="index.html">Brasil</a></div>
+        <div class="hamburger_item"><a href="cidades.html">Cidades</a></div>
+        <div class="hamburger_item"><a href="operadoras.html">Operadoras</a></div>
+        <div class="hamburger_item"><a href="sobre.html">Sobre</a></div>
+        <div class="hamburger_item"><a href="publicacoes.html">Publicações</a></div>
+      </div>
+      <div class="close_hamburger">X</div>
+    </div>
     <div class='bigcontainer'>
       <div class='sides'></div>
       <div class='total'>
         <div class="menu">
-          <img src="img/logo.svg" alt="logo" width="190px" height="100px">
+          <span class="hamburger_icon"><img src="img/hambg.svg"></span><a href="index.html"><img src="img/logo.svg" alt="logo" class='svglogo' width="190px" height="100px"></a>
+
 
           <ul class="menu">
             <li class="menuitem"><a href="index.html">Brasil</a></li>
@@ -36,19 +47,50 @@
           <div class="head_geral">
             Publicações
           </div>
-          <div class="container_2col">
-
-            <div class="first_col">
-            </div>
-            <div class="second_col">
-            </div>
-
+          <p class='bloco_download'>
+            Base de dados 2019 para download
+          </p>
+          <p class='base_texto_longo'>
+            Dados consolidados em 2019, em formato Excel.
+          </p>
+          <div class='genholder'>
+              <a href='data/micromobilidade brasil_base de dados_10fev2020.xlsx' target='_blank'>
+                <img src="img/download.svg" alt="download" width="28px" height="27px">
+              </a>
+              <div class='download_detail'>&nbsp BR</div>
+          </div>
+          <p class='bloco_download'>
+            Metodologia da pesquisa
+          </p>
+          <p class='base_texto_longo'>
+            Artigo detalhando processo e fontes de dados para pesquisa, em formato PDF.
+          </p>
+          <div class='genholder'>
+              <a href='data/micromobilidade_fonte_escopo_dados.pdf' target='_blank'>
+                <img src="img/download.svg" alt="download" width="28px" height="27px">
+              </a>
+              <div class='download_detail'>&nbsp BR</div>
           </div>
         </div>
+      </div>
       </div>
       <div class='sides'></div>
     </div>
   </body>
+
+  <script>
+    d3.select('span.hamburger_icon')
+    .on('mousedown',function(){
+      d3.select('div.hamburger')
+      .style('display','flex')
+    })
+
+    d3.select('div.close_hamburger')
+    .on('mousedown',function(){
+      d3.select('div.hamburger')
+      .style('display','none')
+    })
+  </script>
 
   <!-- <script src="js/main.js" charset="utf-8"  type="module"></script>
   <script src="js/cluster.js" charset="utf-8"  type="module"></script> -->
