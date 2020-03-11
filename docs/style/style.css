@@ -11,15 +11,14 @@ a,a:hover,a:checked{
     letter-spacing: .5px;
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-left: 10px;
     font-size: 7px;
     text-transform: uppercase;
     color: grey;
-    background-color: yellow;
   }
   .footer-item{
-    padding-top: 20px;
+    padding-top: 10px;
     padding-right: 0px;
   }
   .svglogo{
@@ -169,6 +168,10 @@ a,a:hover,a:checked{
     padding: 0;
     display: none;
   }
+  ul.list_sistema{
+    list-style-type: none;
+    padding: 0;
+  }
   li.menuitem{
     float: left;
     padding: 30px;
@@ -209,16 +212,17 @@ a,a:hover,a:checked{
     flex-grow: 1;
   }
   #main{
-    display: flex;
+    display: block;
     flex-grow: 0.9;
     flex-basis: auto;
     flex-direction: column;
     height: 95vh;
   }
   #map{
-    display: flex;
+    /* display: flex; */
     background-color: #EDEDED;
-    flex-grow: 0.6;
+    /* flex-grow: 0.6; */
+    height: 400px;
     flex-basis: 0;
     z-index: 4;
   }
@@ -558,6 +562,10 @@ a,a:hover,a:checked{
     align-items: center;
   }
   ul.menu{
+    list-style-type: none;
+    padding: 0;
+  }
+  ul.list_sistema{
     list-style-type: none;
     padding: 0;
   }

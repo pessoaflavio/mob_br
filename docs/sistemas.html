@@ -45,18 +45,18 @@
         <div class='artigo'>
           <div class='container_2col'>
             <div class='first_col'>
-              <div class="head_geral">
+              <h1>
                 Lista de sistemas Brasil
-              </div>
-              <ul class="menu">
+              </h1>
+              <ul class="list_sistema">
 
               </ul>
             </div>
             <div class='second_col'>
-              <div class="head_geral">
+              <h1>
                 Sistemas por estado
-              </div>
-              <ul class="menu">
+              </h1>
+              <ul class="list_sistema">
 
               </ul>
             </div>
@@ -90,7 +90,7 @@
       console.log(data)
       d3
       .select('div.first_col')
-      .select('ul.menu')
+      .select('ul.list_sistema')
       .selectAll('li')
       .data(data.sistema_total.sort(d3.ascending))
       .enter()
@@ -101,7 +101,7 @@
 
       d3
       .select('div.second_col')
-      .select('ul.menu')
+      .select('ul.list_sistema')
       .selectAll('li')
       .data(data.sistema_por_estado.sort((a, b) => d3.ascending(a.estado, b.estado)))
       .enter()
