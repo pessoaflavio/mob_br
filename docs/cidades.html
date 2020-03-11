@@ -40,7 +40,7 @@
             <li class="menuitem"><a href="sobre.html">Sobre</a></li>
             <li class="menuitem"><a href="publicacoes.html">Publicações</a></li>
           </ul>
-          <a href="index.html">PT/EN</a>
+          <span><a href="index.html">PT</a> / <a href="index.html">EN</a></span>
         </div>
         <div class='artigo'>
           <div class="head_geral">
@@ -62,7 +62,7 @@
     </div>
     <div class="s03"></div>
     <div class="s02">
-      <span class="divheader">Emissões de CO² evitadas</span>
+      <span class="divheader">Emissões de CO² evitadas/dia</span>
       <span class="bignumber"></span>
     </div>
     <div class="s04holder">
@@ -87,7 +87,7 @@
     </div>
     <div class="s06">
         <div class="s06_01">
-          <span class="divheader">Viagens diárias</span>
+          <span class="divheader">Viagens diárias de bicicleta</span>
           <span class="bignumber"></span>
         </div>
     </div>
@@ -163,7 +163,7 @@
             d3.select(div).select(extradiv).style('opacity',1);
             d3.select(div).select('span.red_dot').remove();
             if (div==='div.s02'){
-              return new Intl.NumberFormat('de-DE').format(data) + ' kg'
+              return new Intl.NumberFormat('de-DE').format(data) + ' tCO2e'
             } else if (div==='div.s07_01') {
               return new Intl.NumberFormat('de-DE').format(data) + '%'
             } else if (div==='div.s07_02') {

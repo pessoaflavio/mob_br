@@ -42,7 +42,7 @@ function missingData(data,div,extradiv) {
         d3.select(div).select(extradiv).style('opacity',1);
         d3.select(div).select('span.red_dot').remove();
         if (div==='div.s02'){
-          return new Intl.NumberFormat('de-DE').format(data) + ' kg'
+          return new Intl.NumberFormat('de-DE').format(data) + ' tCO2e'
         } else if (div==='div.s07_01') {
           return new Intl.NumberFormat('de-DE').format(data) + '%'
         } else if (div==='div.s07_02') {
