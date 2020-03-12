@@ -216,7 +216,7 @@ a,a:hover,a:checked{
     flex-grow: 0.9;
     flex-basis: auto;
     flex-direction: column;
-    height: 95vh;
+    /* height: 95vh; */
   }
   #map{
     /* display: flex; */
