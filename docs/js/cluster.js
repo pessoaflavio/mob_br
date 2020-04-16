@@ -122,7 +122,7 @@ function checkEl(elem){
   return Number.isInteger(elem)
 }
 
-const myRequest = new Request('https://raw.githubusercontent.com/pessoaflavio/mob_v2/master/data/dados_2020.json?token=AHCF2LRZ7SQ7QSMK4ADRAYK6UENEK');
+const myRequest = new Request('https://raw.githubusercontent.com/pessoaflavio/mob_v2/master/data/dados_2020.json');
 
 fetch(myRequest)
   .then(response => response.json())

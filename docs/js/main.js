@@ -128,4 +128,4 @@ function loadData(data){
   d3.json(data).then(data => fillSidePanel(data));
 };
 
-loadData('https://raw.githubusercontent.com/pessoaflavio/mob_v2/master/data/dados_2020.json?token=AHCF2LRZ7SQ7QSMK4ADRAYK6UENEK')
+loadData('https://raw.githubusercontent.com/pessoaflavio/mob_v2/master/data/dados_2020.json')
